@@ -1,6 +1,6 @@
-/* Espacement pour compenser la navbar fixe en haut */
+/* Supprimer le décalage automatique du body */
 body {
-    padding-top: 76px;
+    padding-top: 0 !important;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -10,22 +10,100 @@ main {
     flex: 1;
 }
 
-/* Couleurs personnalisées du club */
-:root {
-    --primary-color: #0d6efd;
-    --dark-color: #1a252f;
-}
-
-.bg-hero {
-    background: linear-gradient(135deg, #1a252f 0%, #0d6efd 100%);
-}
-
+/* Permettre au menu de dépasser de la bannière */
 .hero-banner {
-    padding: 80px 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    overflow: visible !important;
 }
 
-.page-banner {
-    padding: 50px 0;
+.hero-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --------------------------------------------------
+   1. VERSION ORDINATEUR / GRAND ÉCRAN (≥ 992px)
+   -------------------------------------------------- */
+@media (min-width: 992px) {
+    .navbar {
+        position: absolute !important;
+        top: 10px;
+        right: 15px;
+        z-index: 1000;
+        padding: 0;
+    }
+
+    /* Effet pilule uniquement sur ordinateur */
+    .navbar-nav {
+        background-color: rgba(255, 255, 255, 0.9) !important;
+        padding: 6px 18px;
+        border-radius: 25px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .navbar-nav .nav-link {
+        color: #000000 !important;
+        font-weight: bold !important;
+        padding: 4px 12px !important;
+    }
+
+    .navbar-nav .nav-link:hover {
+        color: #0d6efd !important;
+    }
+}
+
+/* --------------------------------------------------
+   2. VERSION MOBILE / MENU BURGER (< 992px)
+   -------------------------------------------------- */
+@media (max-width: 991.98px) {
+    .navbar {
+        position: absolute !important;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 10px 15px;
+        z-index: 1000;
+    }
+
+    /* Bouton burger */
+    .navbar-toggler {
+        background-color: rgba(255, 255, 255, 0.9);
+        border: none;
+    }
+
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    }
+
+    /* Panneau de menu déroulant mobile propre */
+    .navbar-collapse {
+        background-color: rgba(26, 37, 47, 0.95) !important;
+        padding: 15px 20px;
+        border-radius: 8px;
+        margin-top: 10px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .navbar-nav {
+        background-color: transparent !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+    }
+
+    .navbar-nav .nav-link {
+        color: #ffffff !important;
+        font-weight: 600 !important;
+        padding: 8px 0 !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .navbar-nav .nav-item:last-child .nav-link {
+        border-bottom: none;
+    }
 }
 
 /* Styles pour le bouton retour en haut */

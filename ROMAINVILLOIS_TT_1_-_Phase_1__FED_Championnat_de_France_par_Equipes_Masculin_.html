@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * { box-sizing: border-box; font-family: Arial, Helvetica, sans-serif; }
+        body { background-color: #ffffff; color: #000000; margin: 0; padding: 6px; font-size: 12px; }
+        .title { font-size: 15px; font-weight: bold; margin-bottom: 10px; color: #111111; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 10px; font-size: 11px; table-layout: fixed; }
+        .ranking-table th { background-color: #2b5b84; color: #ffffff; font-weight: bold; padding: 5px; text-align: left; border: 1px solid #1e4262; }
+        .ranking-table td { padding: 5px; border: 1px solid #d3d3d3; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+        .ranking-table tr:nth-child(even) { background-color: #f2f5f8; }
+        .ranking-table tr:nth-child(odd) { background-color: #ffffff; }
+        .ranking-table td.center { text-align: center; }
+        .grid-tours { display: flex; flex-wrap: wrap; gap: 10px; }
+        .tour-box { flex: 1 1 calc(50% - 10px); min-width: 280px; }
+        .schedule-table { border: 1px solid #b2c2d1; }
+        .schedule-table th.tour-header { background-color: #2b5b84; color: #ffffff; font-weight: bold; padding: 5px 8px; text-align: left; font-size: 11px; }
+        .schedule-table td { padding: 5px 4px; border: 1px solid #e0e0e0; vertical-align: middle; }
+        .schedule-table tr:nth-child(even) { background-color: #f9fbfd; }
+        .schedule-table tr:nth-child(odd) { background-color: #ffffff; }
+        .team-left { text-align: right; font-weight: 500; font-size: 11px; padding-right: 6px; }
+        .vs-cell { width: 65px; text-align: center; font-weight: bold; color: #333; white-space: nowrap; font-size: 11px; background-color: rgba(0,0,0,0.02); }
+        .team-right { text-align: left; font-weight: 500; font-size: 11px; padding-left: 6px; }
+        @media (max-width: 600px) {
+            .tour-box { flex: 1 1 100%; }
+            .vs-cell { width: 55px; font-size: 10,5px; }
+            .team-left, .team-right { font-size: 10,5px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="title">ROMAINVILLOIS TT 1 - Phase 1 (FED_Championnat de France par Equipes Masculin)</div>
+
+    <table class="ranking-table">
+        <thead>
+            <tr>
+                <th style="width: 10%;">Clt</th>
+                <th style="width: 60%;">Nom équipe</th>
+                <th style="width: 15%; text-align: center;">J</th>
+                <th style="width: 15%; text-align: center;">Pts</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td class="center">1</td><td>CHARENTON TT 3</td><td class="center">3</td><td class="center">9</td></tr>
+            <tr><td class="center">2</td><td>COURBEVOIE STT 7</td><td class="center">3</td><td class="center">7</td></tr>
+            <tr><td class="center">3</td><td>ROMAINVILLOIS TT 1</td><td class="center">3</td><td class="center">7</td></tr>
+            <tr><td class="center">4</td><td>LIMAY ALJ 1</td><td class="center">3</td><td class="center">6</td></tr>
+            <tr><td class="center">5</td><td>MONTREUIL ES 1</td><td class="center">3</td><td class="center">6</td></tr>
+            <tr><td class="center">6</td><td>SAINT GRATIEN 2</td><td class="center">3</td><td class="center">5</td></tr>
+            <tr><td class="center">7</td><td>PONTHIERRY COMT 3</td><td class="center">3</td><td class="center">4</td></tr>
+            <tr><td class="center">8</td><td>THIAIS AS TT 4</td><td class="center">3</td><td class="center">4</td></tr>
+        </tbody>
+    </table>
+
+    <div class="grid-tours">
+        <div class="tour-box">
+            <table class="schedule-table">
+                <thead><tr><th colspan="3" class="tour-header">Poule 15 - tour n°1 du 19/09/2026</th></tr></thead>
+                <tbody>
+                    <tr><td class="team-left">LIMAY ALJ 1</td><td class="vs-cell">25 - 17</td><td class="team-right">ROMAINVILLOIS TT 1</td></tr>
+                    <tr><td class="team-left">CHARENTON TT 3</td><td class="vs-cell">24 - 18</td><td class="team-right">SAINT GRATIEN 2</td></tr>
+                    <tr><td class="team-left">PONTHIERRY COMT 3</td><td class="vs-cell">20 - 22</td><td class="team-right">MONTREUIL ES 1</td></tr>
+                    <tr><td class="team-left">COURBEVOIE STT 7</td><td class="vs-cell">24 - 18</td><td class="team-right">THIAIS AS TT 4</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="tour-box">
+            <table class="schedule-table">
+                <thead><tr><th colspan="3" class="tour-header">Poule 15 - tour n°2 du 03/10/2026</th></tr></thead>
+                <tbody>
+                    <tr><td class="team-left">SAINT GRATIEN 2</td><td class="vs-cell">25 - 17</td><td class="team-right">LIMAY ALJ 1</td></tr>
+                    <tr><td class="team-left">MONTREUIL ES 1</td><td class="vs-cell">15 - 27</td><td class="team-right">CHARENTON TT 3</td></tr>
+                    <tr><td class="team-left">THIAIS AS TT 4</td><td class="vs-cell">21 - 21</td><td class="team-right">PONTHIERRY COMT 3</td></tr>
+                    <tr><td class="team-left">ROMAINVILLOIS TT 1</td><td class="vs-cell">22 - 20</td><td class="team-right">COURBEVOIE STT 7</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="tour-box">
+            <table class="schedule-table">
+                <thead><tr><th colspan="3" class="tour-header">Poule 15 - tour n°3 du 17/10/2026</th></tr></thead>
+                <tbody>
+                    <tr><td class="team-left">LIMAY ALJ 1</td><td class="vs-cell">21 - 21</td><td class="team-right">MONTREUIL ES 1</td></tr>
+                    <tr><td class="team-left">CHARENTON TT 3</td><td class="vs-cell">26 - 16</td><td class="team-right">THIAIS AS TT 4</td></tr>
+                    <tr><td class="team-left">PONTHIERRY COMT 3</td><td class="vs-cell">20 - 22</td><td class="team-right">COURBEVOIE STT 7</td></tr>
+                    <tr><td class="team-left">ROMAINVILLOIS TT 1</td><td class="vs-cell">23 - 19</td><td class="team-right">SAINT GRATIEN 2</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="tour-box">
+            <table class="schedule-table">
+                <thead><tr><th colspan="3" class="tour-header">Poule 15 - tour n°4 du 07/11/2026</th></tr></thead>
+                <tbody>
+                    <tr><td class="team-left">THIAIS AS TT 4</td><td class="vs-cell">-</td><td class="team-right">LIMAY ALJ 1</td></tr>
+                    <tr><td class="team-left">COURBEVOIE STT 7</td><td class="vs-cell">-</td><td class="team-right">CHARENTON TT 3</td></tr>
+                    <tr><td class="team-left">PONTHIERRY COMT 3</td><td class="vs-cell">-</td><td class="team-right">ROMAINVILLOIS TT 1</td></tr>
+                    <tr><td class="team-left">MONTREUIL ES 1</td><td class="vs-cell">-</td><td class="team-right">SAINT GRATIEN 2</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="tour-box">
+            <table class="schedule-table">
+                <thead><tr><th colspan="3" class="tour-header">Poule 15 - tour n°5 du 21/11/2026</th></tr></thead>
+                <tbody>
+                    <tr><td class="team-left">LIMAY ALJ 1</td><td class="vs-cell">-</td><td class="team-right">COURBEVOIE STT 7</td></tr>
+                    <tr><td class="team-left">CHARENTON TT 3</td><td class="vs-cell">-</td><td class="team-right">PONTHIERRY COMT 3</td></tr>
+                    <tr><td class="team-left">SAINT GRATIEN 2</td><td class="vs-cell">-</td><td class="team-right">THIAIS AS TT 4</td></tr>
+                    <tr><td class="team-left">ROMAINVILLOIS TT 1</td><td class="vs-cell">-</td><td class="team-right">MONTREUIL ES 1</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="tour-box">
+            <table class="schedule-table">
+                <thead><tr><th colspan="3" class="tour-header">Poule 15 - tour n°6 du 05/12/2026</th></tr></thead>
+                <tbody>
+                    <tr><td class="team-left">PONTHIERRY COMT 3</td><td class="vs-cell">-</td><td class="team-right">LIMAY ALJ 1</td></tr>
+                    <tr><td class="team-left">CHARENTON TT 3</td><td class="vs-cell">-</td><td class="team-right">ROMAINVILLOIS TT 1</td></tr>
+                    <tr><td class="team-left">COURBEVOIE STT 7</td><td class="vs-cell">-</td><td class="team-right">SAINT GRATIEN 2</td></tr>
+                    <tr><td class="team-left">THIAIS AS TT 4</td><td class="vs-cell">-</td><td class="team-right">MONTREUIL ES 1</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="tour-box">
+            <table class="schedule-table">
+                <thead><tr><th colspan="3" class="tour-header">Poule 15 - tour n°7 du 12/12/2026</th></tr></thead>
+                <tbody>
+                    <tr><td class="team-left">LIMAY ALJ 1</td><td class="vs-cell">-</td><td class="team-right">CHARENTON TT 3</td></tr>
+                    <tr><td class="team-left">SAINT GRATIEN 2</td><td class="vs-cell">-</td><td class="team-right">PONTHIERRY COMT 3</td></tr>
+                    <tr><td class="team-left">MONTREUIL ES 1</td><td class="vs-cell">-</td><td class="team-right">COURBEVOIE STT 7</td></tr>
+                    <tr><td class="team-left">ROMAINVILLOIS TT 1</td><td class="vs-cell">-</td><td class="team-right">THIAIS AS TT 4</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</body>
+</html>

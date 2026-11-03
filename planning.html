@@ -3,24 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planning - Club Sportif</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <title>TTR - Planning</title>
+    <!-- Bootstrap 5 CSS Local -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons Local -->
+    <link href="vendor/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Style personnalisé -->
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-    <!-- NAVBAR COMMUNE -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+<!-- BANNIÈRE PLACÉE TOUT EN HAUT -->
+<header class="hero-banner p-0 overflow-hidden position-relative">
+    <!-- NAVBAR SUPERPOSÉE SUR LA BANNIÈRE -->
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-none">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">
-                <i class="bi bi-trophy-fill text-warning me-2"></i>CLUB SPORTIF
-            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
+                    <link rel="stylesheet" href="css/style.css">
                     <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
                     <li class="nav-item"><a class="nav-link" href="planning.html">Planning</a></li>
                     <li class="nav-item"><a class="nav-link" href="competitions.html">Compétitions</a></li>
@@ -31,31 +37,170 @@
         </div>
     </nav>
 
-    <!-- BANNIÈRE DE PAGE -->
-    <header class="bg-dark text-white text-center page-banner border-bottom border-secondary">
-        <div class="container">
-            <h1 class="fw-bold">Planning des Entraînements</h1>
+    <!-- L'IMAGE DE LA BANNIÈRE -->
+    <img src="images/banniere.jpeg" alt="Bannière TT Romainvillois" class="img-fluid w-100 d-block">
+</header>
+
+<main class="container my-5">
+    <!-- Titre de la page -->
+    <section class="text-center mb-5">
+        <h1 class="display-5 fw-bold text-primary mb-2">Planning</h1>
+        <p class="lead text-secondary">Fermeture des créneaux libres et entrainements dirigés</p>
+    </section>
+
+    <!-- Grille des mois avec Collapse -->
+    <div class="row g-4 justify-content-center">
+
+        <!-- SEPTEMBRE (Fermé par défaut - Mois passé) -->
+        <div class="col-md-6 col-lg-5">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-header bg-primary text-white py-3" role="button" data-bs-toggle="collapse" data-bs-target="#collapseSeptembre" aria-expanded="false" aria-controls="collapseSeptembre">
+                    <h3 class="h5 mb-0 fw-bold d-flex justify-content-between align-items-center">
+                        <span><i class="bi bi-calendar-event me-2"></i>Septembre</span>
+                        <i class="bi bi-chevron-down small"></i>
+                    </h3>
+                </div>
+                <div id="collapseSeptembre" class="collapse">
+                    <div class="card-body">
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-3 pb-2 border-bottom">
+                                <span class="badge bg-warning text-dark mb-1">Entraînement Dirigé</span>
+                                <p class="mb-0 fw-semibold text-dark">Samedi 19</p>
+                                <small class="text-muted">Entraînement dirigé Adulte compétiteur (jeu libre possible)</small>
+                            </li>
+                            <li class="mb-3 pb-2 border-bottom">
+                                <span class="badge bg-danger mb-1">Compétition</span>
+                                <p class="mb-0 fw-semibold text-dark">Vendredi 25</p>
+                                <small class="text-muted">Compétition équipe 2, 3 et 4</small>
+                            </li>
+                            <li>
+                                <span class="badge bg-warning text-dark mb-1">Entraînement Dirigé</span>
+                                <p class="mb-0 fw-semibold text-dark">Samedi 26</p>
+                                <small class="text-muted">Entraînement dirigé Adulte compétiteur (jeu libre possible)</small>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-    </header>
 
-    <!-- CONTENU PRINCIPAL (VIDE) -->
-    <main class="container my-5 text-center text-muted">
-        <!-- Emplacement pour votre futur contenu -->
-    </main>
-
-    <!-- FOOTER COMMUN -->
-    <footer class="bg-dark text-white py-4 mt-auto">
-        <div class="container text-center">
-            <p class="mb-1">&copy; 2026 Club Sportif. Tous droits réservés.</p>
-            <small class="text-secondary">123 Rue du Stade, 75000 Ville — Contact : contact@clubsportif.fr</small>
+        <!-- OCTOBRE (Fermé par défaut - Mois passé) -->
+        <div class="col-md-6 col-lg-5">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-header bg-primary text-white py-3" role="button" data-bs-toggle="collapse" data-bs-target="#collapseOctobre" aria-expanded="false" aria-controls="collapseOctobre">
+                    <h3 class="h5 mb-0 fw-bold d-flex justify-content-between align-items-center">
+                        <span><i class="bi bi-calendar-event me-2"></i>Octobre</span>
+                        <i class="bi bi-chevron-down small"></i>
+                    </h3>
+                </div>
+                <div id="collapseOctobre" class="collapse">
+                    <div class="card-body">
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-3 pb-2 border-bottom">
+                                <span class="badge bg-danger mb-1">Compétition</span>
+                                <p class="mb-0 fw-semibold text-dark">Samedi 3</p>
+                                <small class="text-muted">Compétition équipe 1</small>
+                            </li>
+                            <li class="mb-3 pb-2 border-bottom">
+                                <span class="badge bg-warning text-dark mb-1">Entraînement Dirigé</span>
+                                <p class="mb-0 fw-semibold text-dark">Samedi 10</p>
+                                <small class="text-muted">Entraînement dirigé Adulte compétiteur (jeu libre possible)</small>
+                            </li>
+                            <li class="mb-3 pb-2 border-bottom">
+                                <span class="badge bg-danger mb-1">Compétition</span>
+                                <p class="mb-0 fw-semibold text-dark">Vendredi 16</p>
+                                <small class="text-muted">Compétition équipe 2, 3 et 4</small>
+                            </li>
+                            <li>
+                                <span class="badge bg-danger mb-1">Compétition</span>
+                                <p class="mb-0 fw-semibold text-dark">Samedi 17</p>
+                                <small class="text-muted">Compétition équipe 1</small>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-    </footer>
 
-    <button id="backToTop" class="btn btn-primary shadow" title="Retour en haut">
-        <i class="bi bi-arrow-up"></i>
-    </button>
+        <!-- NOVEMBRE (Ouvert par défaut avec "collapse show") -->
+        <div class="col-md-6 col-lg-5">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-header bg-primary text-white py-3" role="button" data-bs-toggle="collapse" data-bs-target="#collapseNovembre" aria-expanded="true" aria-controls="collapseNovembre">
+                    <h3 class="h5 mb-0 fw-bold d-flex justify-content-between align-items-center">
+                        <span><i class="bi bi-calendar-event me-2"></i>Novembre</span>
+                        <i class="bi bi-chevron-down small"></i>
+                    </h3>
+                </div>
+                <div id="collapseNovembre" class="collapse show">
+                    <div class="card-body">
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-3 pb-2 border-bottom">
+                                <span class="badge bg-warning text-dark mb-1">Entraînement Dirigé</span>
+                                <p class="mb-0 fw-semibold text-dark">Samedi 7</p>
+                                <small class="text-muted">Entraînement dirigé Adulte compétiteur (jeu libre possible)</small>
+                            </li>
+                            <li class="mb-3 pb-2 border-bottom">
+                                <span class="badge bg-danger mb-1">Compétition</span>
+                                <p class="mb-0 fw-semibold text-dark">Vendredi 20</p>
+                                <small class="text-muted">Compétition équipe 2, 3 et 4</small>
+                            </li>
+                            <li>
+                                <span class="badge bg-danger mb-1">Compétition</span>
+                                <p class="mb-0 fw-semibold text-dark">Samedi 21</p>
+                                <small class="text-muted">Compétition équipe 1</small>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
+        <!-- DÉCEMBRE (Ouvert par défaut avec "collapse show") -->
+        <div class="col-md-6 col-lg-5">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-header bg-primary text-white py-3" role="button" data-bs-toggle="collapse" data-bs-target="#collapseDecembre" aria-expanded="true" aria-controls="collapseDecembre">
+                    <h3 class="h5 mb-0 fw-bold d-flex justify-content-between align-items-center">
+                        <span><i class="bi bi-calendar-event me-2"></i>Décembre</span>
+                        <i class="bi bi-chevron-down small"></i>
+                    </h3>
+                </div>
+                <div id="collapseDecembre" class="collapse show">
+                    <div class="card-body">
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-3 pb-2 border-bottom">
+                                <span class="badge bg-danger mb-1">Compétition</span>
+                                <p class="mb-0 fw-semibold text-dark">Vendredi 11</p>
+                                <small class="text-muted">Compétition équipe 2, 3 et 4</small>
+                            </li>
+                            <li>
+                                <span class="badge bg-danger mb-1">Compétition</span>
+                                <p class="mb-0 fw-semibold text-dark">Samedi 12</p>
+                                <small class="text-muted">Compétition équipe 1</small>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-white py-4 mt-auto">
+    <div class="container text-center">
+        <p class="mb-1"></p>
+        <small class="text-secondary">Contact : <a href="mailto:ttrv93@gmail.com" class="text-white text-decoration-none">ttrv93@gmail.com</a></small>
+    </div>
+</footer>
+
+<button id="backToTop" class="btn btn-primary shadow" title="Retour en haut">
+    <i class="bi bi-arrow-up"></i>
+</button>
+
+<!-- Bootstrap 5 JS Bundle Local -->
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
 </body>
+
 </html>

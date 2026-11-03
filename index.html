@@ -3,27 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Club Sportif - Accueil</title>
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <title>TTR - Accueil</title>
+    <!-- Bootstrap 5 CSS Local -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons Local -->
+    <link href="vendor/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
     <!-- Style personnalisé -->
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-    <!-- NAVBAR COMMUNE -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+<!-- BANNIÈRE PLACÉE TOUT EN HAUT -->
+<header class="hero-banner p-0 overflow-hidden position-relative">
+    <!-- NAVBAR SUPERPOSÉE SUR LA BANNIÈRE -->
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-none">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">
-                <i class="bi bi-trophy-fill text-warning me-2"></i>CLUB SPORTIF
-            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
+                    <link rel="stylesheet" href="css/style.css">
                     <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
                     <li class="nav-item"><a class="nav-link" href="planning.html">Planning</a></li>
                     <li class="nav-item"><a class="nav-link" href="competitions.html">Compétitions</a></li>
@@ -34,35 +37,143 @@
         </div>
     </nav>
 
-    <!-- BANNIÈRE D'ACCUEIL (HERO SECTION) -->
-    <header class="bg-hero text-white text-center hero-banner">
-        <div class="container py-5">
-            <h1 class="display-4 fw-bold">Bienvenue au Club Sportif</h1>
-            <p class="lead">Découvrez toutes nos activités, nos équipes et nos compétitions.</p>
-            <a href="planning.html" class="btn btn-primary btn-lg mt-3">Voir le planning</a>
+    <!-- L'IMAGE DE LA BANNIÈRE -->
+    <img src="images/banniere.jpeg" alt="Bannière TT Romainvillois" class="img-fluid w-100 d-block">
+</header>
+
+<!-- CONTENU PRINCIPAL -->
+<main class="container my-5">
+    <!-- Présentation générale -->
+    <section class="text-center mb-5">
+        <h1 class="display-5 fw-bold text-primary mb-3">TENNIS DE TABLE ROMAINVILLOIS</h1>
+        <p class="lead mb-3">
+            Le club de Tennis de Table de <strong>ROMAINVILLOIS TT</strong> vous accueille au
+            <span class="fw-semibold">Gymnase Jean Guimier – 15 Rue Pasteur à ROMAINVILLE</span>.
+        </p>
+        <p class="text-muted fs-5">
+            Le club dispose d'une <strong>salle spécifique de 8 tables</strong> et propose la pratique du tennis de table en loisir et en compétition.
+        </p>
+    </section>
+
+
+    <!-- Grille des Horaires -->
+    <section class="mb-5">
+        <h2 class="h3 fw-bold text-center mb-4"><i class="bi bi-clock me-2"></i>Horaires</h2>
+
+        <div class="row g-3">
+            <!-- Lundi -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-header bg-primary text-white fw-bold">Lundi</div>
+                    <div class="card-body">
+                        <span class="badge bg-warning text-dark mb-1">Dirigé</span>
+                        <p class="card-text mb-0"><strong>18h - 19h :</strong> Enfant débutant (groupe A)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mardi -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-header bg-primary text-white fw-bold">Mardi</div>
+                    <div class="card-body">
+                        <span class="badge bg-danger mb-1">Compétiteurs</span>
+                        <p class="card-text mb-0"><strong>18h - 22h :</strong> Adultes et Jeunes compétiteurs</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mercredi -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-header bg-primary text-white fw-bold">Mercredi</div>
+                    <div class="card-body">
+                        <div class="mb-2">
+                            <span class="badge bg-warning text-dark">Dirigé</span>
+                            <small class="d-block"><strong>18h - 19h :</strong> Enfant débutant (groupe B)</small>
+                        </div>
+                        <div class="mb-2">
+                            <span class="badge bg-warning text-dark">Dirigé</span>
+                            <small class="d-block"><strong>19h - 20h :</strong> Enfant confirmé (groupe C)</small>
+                        </div>
+                        <div>
+                            <span class="badge bg-success">Accès Libre</span>
+                            <small class="d-block"><strong>20h - 22h :</strong> Tous les adhérents <span class="text-muted">(sauf compétition)</span></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jeudi -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-header bg-primary text-white fw-bold">Jeudi</div>
+                    <div class="card-body">
+                        <span class="badge bg-success mb-1">Accès Libre</span>
+                        <p class="card-text mb-0"><strong>18h - 22h :</strong> Tous les adhérents</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vendredi -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-header bg-primary text-white fw-bold">Vendredi</div>
+                    <div class="card-body">
+                        <span class="badge bg-success mb-1">Accès Libre</span>
+                        <p class="card-text mb-0"><strong>18h - 22h :</strong> Tous les adhérents <span class="text-muted">(sauf compétition)</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Samedi -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-header bg-primary text-white fw-bold">Samedi</div>
+                    <div class="card-body">
+                        <span class="badge bg-success">Accès Libre</span>
+                        <span class="badge bg-warning text-dark">Dirigé Adulte</span>
+                        <p class="card-text mt-1 mb-0"><strong>14h - 18h :</strong> Tous les adhérents <span class="text-muted">(sauf compétition)</span> + Entraînement dirigé adulte <a href="planning.html" class="text-decoration-none">(voir planning)</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dimanche -->
+            <div class="col-md-12 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-header bg-primary text-white fw-bold">Dimanche</div>
+                    <div class="card-body">
+                        <span class="badge bg-success mb-1">Accès Libre</span>
+                        <p class="card-text mb-0"><strong>9h30 - 12h :</strong> Tous les adhérents</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </header>
 
-    <!-- CONTENU PRINCIPAL (VIDE) -->
-    <main class="container my-5 text-center text-muted">
-        <!-- Emplacement pour votre futur contenu -->
-    </main>
-
-    <!-- FOOTER COMMUN -->
-    <footer class="bg-dark text-white py-4 mt-auto">
-        <div class="container text-center">
-            <p class="mb-1">&copy; 2026 Club Sportif. Tous droits réservés.</p>
-            <small class="text-secondary">123 Rue du Stade, 75000 Ville — Contact : contact@clubsportif.fr</small>
+        <!-- Note d'information -->
+        <div class="mt-4 text-center">
+            <p class="text-muted fst-italic">
+                <i class="bi bi-info-circle me-1"></i> Les créneaux libres ne sont pas accessibles les jours de compétitions. Consultez le <a href="planning.html" class="fw-semibold">Planning</a>.
+            </p>
         </div>
-    </footer>
+    </section>
+</main>
 
-    <!-- BOUTON RETOUR EN HAUT -->
-    <button id="backToTop" class="btn btn-primary shadow" title="Retour en haut">
-        <i class="bi bi-arrow-up"></i>
-    </button>
+<!-- FOOTER -->
+<footer class="bg-dark text-white py-4 mt-auto">
+    <div class="container text-center">
+        <p class="mb-1"></p>
+        <small class="text-secondary">Contact : <a href="mailto:ttrv93@gmail.com" class="text-white text-decoration-none">ttrv93@gmail.com</a></small>
+    </div>
+</footer>
 
-    <!-- Scripts Bootstrap et JS local -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
+<button id="backToTop" class="btn btn-primary shadow" title="Retour en haut">
+    <i class="bi bi-arrow-up"></i>
+</button>
+
+<!-- Bootstrap 5 JS Bundle Local -->
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
 </body>
+
 </html>
