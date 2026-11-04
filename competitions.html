@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="h-100">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,12 +12,25 @@
 
     <!-- Style personnalisé -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Style strict pour empêcher le double scroll global -->
+    <style>
+        html, body {
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
 </head>
 
 <body>
 
 <!-- BANNIÈRE PLACÉE TOUT EN HAUT -->
-<header class="hero-banner p-0 overflow-hidden position-relative">
+<header class="hero-banner p-0 overflow-hidden position-relative flex-shrink-0">
     <!-- NAVBAR SUPERPOSÉE SUR LA BANNIÈRE -->
     <nav class="navbar navbar-expand-lg navbar-dark shadow-none">
         <div class="container">
@@ -26,12 +39,14 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <link rel="stylesheet" href="css/style.css">
                     <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
                     <li class="nav-item"><a class="nav-link" href="planning.html">Planning</a></li>
                     <li class="nav-item"><a class="nav-link" href="competitions.html">Compétitions</a></li>
                     <li class="nav-item"><a class="nav-link" href="equipe_1.html">Équipe 1</a></li>
                     <li class="nav-item"><a class="nav-link" href="equipe_2.html">Équipe 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="equipe_3.html">Équipe 3</a></li>
+                    <li class="nav-item"><a class="nav-link" href="equipe_4.html">Équipe 4</a></li>
+                    <li class="nav-item"><a class="nav-link" href="equipe_veteran.html">Vétérans</a></li>
                 </ul>
             </div>
         </div>
@@ -41,30 +56,28 @@
     <img src="images/banniere.jpeg" alt="Bannière TT Romainvillois" class="img-fluid w-100 d-block">
 </header>
 
-<main class="container-fluid px-0 my-3">
-    <!-- Titre de la page -->
-    <section class="text-center mb-3 px-3">
-        <h1 class="display-5 fw-bold text-primary mb-2">Compétitions</h1>
-        <p class="lead text-secondary">Calendrier officiel CD93 - Saison 2026/2027</p>
+<!-- CONTENU PRINCIPAL PLEIN ESPACE SANS SCROLL GLOBAL -->
+<main class="flex-grow-1 d-flex flex-column container-fluid px-0 m-0" style="overflow: hidden;">
+    <!-- Titre compact -->
+    <section class="text-center py-1 px-3 flex-shrink-0 bg-white border-bottom">
+        <h1 class="h5 fw-bold text-primary mb-0">Compétitions</h1>
+        <p class="text-secondary small mb-0" style="font-size: 0.8rem;">Calendrier officiel CD93 - Saison 2026/2027</p>
     </section>
 
-    <!-- Affichage du PDF en plein écran sans barre d'outils -->
-    <section class="w-100">
-        <div class="w-100" style="height: 85vh; min-height: 600px;">
-            <iframe src="cal-v2.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="100%" height="100%" style="border: none;">
-                <p class="text-center">Votre navigateur ne supporte pas l'affichage direct des PDF. Vous pouvez
-                    <a href="cal-v2.pdf" target="_blank">télécharger le calendrier ici</a>.
-                </p>
-            </iframe>
-        </div>
+    <!-- Iframe occupant tout le reste de la hauteur de l'écran avec son propre scroll unique -->
+    <section class="flex-grow-1 w-100 px-0 pb-0" style="overflow-y: auto;">
+        <iframe src="cal-v2.pdf#toolbar=0&navpanes=0&scrollbar=1" type="application/pdf" width="100%" height="100%" style="border: none; display: block; min-height: 100%;">
+            <p class="text-center">Votre navigateur ne supporte pas l'affichage direct des PDF. Vous pouvez
+                <a href="cal-v2.pdf" target="_blank">télécharger le calendrier ici</a>.
+            </p>
+        </iframe>
     </section>
 </main>
 
 <!-- FOOTER -->
-<footer class="bg-dark text-white py-4 mt-auto">
+<footer class="bg-dark text-white py-2 flex-shrink-0">
     <div class="container text-center">
-        <p class="mb-1"></p>
-        <small class="text-secondary">Contact : <a href="mailto:ttrv93@gmail.com" class="text-white text-decoration-none">ttrv93@gmail.com</a></small>
+        <small class="text-secondary" style="font-size: 0.75rem;">Contact : <a href="mailto:ttrv93@gmail.com" class="text-white text-decoration-none">ttrv93@gmail.com</a></small>
     </div>
 </footer>
 
@@ -76,5 +89,4 @@
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="js/main.js"></script>
 </body>
-
 </html>

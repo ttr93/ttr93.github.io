@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTR - Equipe Vétérans</title>
+    <!-- Bootstrap 5 CSS Local -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons Local -->
+    <link href="vendor/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Style personnalisé -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- BANNIÈRE PLACÉE TOUT EN HAUT -->
+<header class="hero-banner p-0 overflow-hidden position-relative">
+    <!-- NAVBAR SUPERPOSÉE SUR LA BANNIÈRE -->
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-none">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <link rel="stylesheet" href="css/style.css">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="planning.html">Planning</a></li>
+                    <li class="nav-item"><a class="nav-link" href="competitions.html">Compétitions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="equipe_1.html">Équipe 1</a></li>
+                    <li class="nav-item"><a class="nav-link" href="equipe_2.html">Équipe 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="equipe_3.html">Équipe 3</a></li>
+                    <li class="nav-item"><a class="nav-link" href="equipe_4.html">Équipe 4</a></li>
+                    <li class="nav-item"><a class="nav-link" href="equipe_veteran.html">Vétéran</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- L'IMAGE DE LA BANNIÈRE -->
+    <img src="images/banniere.jpeg" alt="Bannière TT Romainvillois" class="img-fluid w-100 d-block">
+</header>
+
+<main class="container-fluid my-4 px-2 px-md-4">
+    <!-- Conteneur responsive pour le tableau de l'équipe 1 -->
+    <div class="card shadow-sm border-0">
+        <div class="card-body p-0">
+            <iframe src="ROMAINVILLOIS_TT_1_-_Phase_1__D93_Championnat_par__quipes_V_t_rans_.html"
+                    title="Résultats Équipe 2"
+                    class="w-100 border-0 rounded"
+                    style="height: 1100px; display: block;"
+                    id="equipeIframe">
+            </iframe>
+        </div>
+    </div>
+</main>
+
+<!-- Script optionnel pour ajuster automatiquement la hauteur de l'iframe selon le contenu -->
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const iframe = document.getElementById('equipeIframe');
+        iframe.addEventListener('load', function() {
+            try {
+                const height = iframe.contentWindow.document.body.scrollHeight;
+                iframe.style.height = (height + 30) + 'px';
+            } catch (e) {
+                // Fallback si le navigateur bloque l'accès direct (ex: protocole file:// strict)
+                iframe.style.height = '1200px';
+            }
+        });
+    });
+</script>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-white py-4 mt-auto">
+    <div class="container text-center">
+        <p class="mb-1"></p>
+        <small class="text-secondary">Contact : <a href="mailto:ttrv93@gmail.com" class="text-white text-decoration-none">ttrv93@gmail.com</a></small>
+    </div>
+</footer>
+
+<button id="backToTop" class="btn btn-primary shadow" title="Retour en haut">
+    <i class="bi bi-arrow-up"></i>
+</button>
+
+<!-- Bootstrap 5 JS Bundle Local -->
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+
+</html>
