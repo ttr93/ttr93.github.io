@@ -12,6 +12,20 @@
 
     <!-- Style personnalisé -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Style strict pour empêcher le double scroll global -->
+    <style>
+        html, body {
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -34,7 +48,7 @@
                     <li class="nav-item"><a class="nav-link" href="equipe_2.html">Équipe 2</a></li>
                     <li class="nav-item"><a class="nav-link" href="equipe_3.html">Équipe 3</a></li>
                     <li class="nav-item"><a class="nav-link" href="equipe_4.html">Équipe 4</a></li>
-                    <li class="nav-item"><a class="nav-link" href="equipe_veteran.html">Vétéran</a></li>
+                    <li class="nav-item"><a class="nav-link" href="equipe_veteran.html">Vétérans</a></li>
                 </ul>
             </div>
         </div>
@@ -49,7 +63,7 @@
     <div class="card shadow-sm border-0">
         <div class="card-body p-0">
             <iframe src="ROMAINVILLOIS_TT_1_-_Phase_1__D93_Championnat_par__quipes_V_t_rans_.html"
-                    title="Résultats Équipe 2"
+                    title="Résultats Équipe Veterans"
                     class="w-100 border-0 rounded"
                     style="height: 1100px; display: block;"
                     id="equipeIframe">
